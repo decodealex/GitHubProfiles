@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523D097723E1A1E600AA9BB9 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D097623E1A1E600AA9BB9 /* UIHelper.swift */; };
 		5248D01723D7804B0050E8D0 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5248D01623D7804B0050E8D0 /* ErrorMessage.swift */; };
 		525A129E23C87B8D00586563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A129D23C87B8D00586563 /* AppDelegate.swift */; };
 		525A12A023C87B8D00586563 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A129F23C87B8D00586563 /* SceneDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		523D097623E1A1E600AA9BB9 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		5248D01623D7804B0050E8D0 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		525A129A23C87B8D00586563 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		525A129D23C87B8D00586563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				5248D01623D7804B0050E8D0 /* ErrorMessage.swift */,
+				523D097623E1A1E600AA9BB9 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				528D5AD523C9D8AB00C1CC85 /* GFTextField.swift in Sources */,
 				525A12B423C88EA700586563 /* FavoritesListVC.swift in Sources */,
 				528D5AD323C9D5C600C1CC85 /* GFButton.swift in Sources */,
+				523D097723E1A1E600AA9BB9 /* UIHelper.swift in Sources */,
 				52FDF3BD23E043C800C2B325 /* GFAvatarImageView.swift in Sources */,
 				528D5ADF23CB3F4A00C1CC85 /* UIViewController+Ext.swift in Sources */,
 				525A12B223C88E7300586563 /* SearchVC.swift in Sources */,
