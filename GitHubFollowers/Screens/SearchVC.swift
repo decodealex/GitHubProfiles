@@ -19,6 +19,7 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        usernameTextField.text = "Sallen0400"
         configureLogoImageView()
         configureTextField()
         configureCallToActionButton()

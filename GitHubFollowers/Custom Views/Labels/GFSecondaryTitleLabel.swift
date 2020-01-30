@@ -1,14 +1,14 @@
 //
-//  GFTitleLabel.swift
+//  GFSecondaryTitleLabel.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 12.01.2020.
+//  Created by Oleksandr Kovalyshyn on 30.01.2020.
 //  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
 //
 
 import UIKit
 
-class GFTitleLabel: UILabel {
+class GFSecondaryTitleLabel: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,18 +19,18 @@ class GFTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(textAligment: NSTextAlignment, fontSize: CGFloat) {
+    init(fontSize: CGFloat) {
         super.init(frame: .zero)
-        self.textAlignment = textAligment
-        self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
+        font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
         configure()
     }
     
     private func configure() {
-        textColor = .label
+        textColor = .secondaryLabel
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.90
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
 }
