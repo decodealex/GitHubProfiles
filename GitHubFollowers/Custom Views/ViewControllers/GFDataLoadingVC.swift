@@ -11,12 +11,7 @@ import UIKit
 class GFDataLoadingVC: UIViewController {
     
     var containerView: UIView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
+
     
     func showLoadingView() {
         containerView = UIView(frame: view.bounds)
@@ -33,12 +28,13 @@ class GFDataLoadingVC: UIViewController {
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            activityIndicator.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+            activityIndicator.centerXAnchor.constraint(equalTo: containerView.centerXAnchor)
         ])
         
         activityIndicator.startAnimating()
     }
+    
     
     func dissmissLoadingView() {
         DispatchQueue.main.async {
@@ -47,11 +43,10 @@ class GFDataLoadingVC: UIViewController {
         }
     }
     
+    
     func showEmptyStateView(with message: String, in view: UIView) {
         let emptyStateView = GFEmptyStateView(message: message)
         emptyStateView.frame = view.bounds
         view.addSubview(emptyStateView)
     }
-    
-    
 }

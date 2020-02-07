@@ -17,8 +17,10 @@ class SearchVC: UIViewController {
     
     var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubviews(logoImageView, usernameTextField, callToActionButton)
         view.backgroundColor = .systemBackground
         usernameTextField.text = "Sallen0400"
         configureLogoImageView()
@@ -27,16 +29,19 @@ class SearchVC: UIViewController {
         createDissmissKeyboardTapGesture()
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
         usernameTextField.text = ""
     }
     
+    
     func createDissmissKeyboardTapGesture() {
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
+    
     
     @objc func pushFollowerListVC() {
         
@@ -51,8 +56,8 @@ class SearchVC: UIViewController {
         navigationController?.pushViewController(followerListVC, animated: true)
     }
     
+    
     func configureLogoImageView() {
-        view.addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
         logoImageView.image = Images.ghLogo
         
@@ -68,8 +73,8 @@ class SearchVC: UIViewController {
         ])
     }
     
+    
     func configureTextField() {
-        view.addSubview(usernameTextField)
         usernameTextField.delegate = self
         
         NSLayoutConstraint.activate([
@@ -80,8 +85,8 @@ class SearchVC: UIViewController {
         ])
     }
     
+    
     func configureCallToActionButton() {
-        view.addSubview(callToActionButton)
         callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside )
         
         NSLayoutConstraint.activate([
@@ -92,6 +97,7 @@ class SearchVC: UIViewController {
         ])
     }
 }
+
 
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

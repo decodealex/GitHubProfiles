@@ -15,6 +15,7 @@ class NetworkManager {
     
     private init() {}
     
+    
     func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], GFError>) -> Void) {
         let endpoint = baseURL + "/users/\(username)/followers?per_page=100&page=\(page)"
         
@@ -51,6 +52,7 @@ class NetworkManager {
         
         task.resume()
     }
+    
     
     func getUserInfo(for username: String, completed: @escaping (Result<User, GFError>) -> Void) {
         let endpoint = baseURL + "/users/\(username)"
@@ -89,6 +91,7 @@ class NetworkManager {
         
         task.resume()
     }
+    
     
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {
         

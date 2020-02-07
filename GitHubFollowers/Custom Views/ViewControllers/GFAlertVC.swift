@@ -21,6 +21,7 @@ class GFAlertVC: UIViewController {
     
     let padding: CGFloat = 20
     
+    
     init(title: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil)
         self.alertTitle = title
@@ -28,19 +29,23 @@ class GFAlertVC: UIViewController {
         self.buttonTitle = buttonTitle
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         configureContainerView()
+        containerView.addSubviews(titleLabel, actionButton, messageLabel)
         configureTitleLabel()
         configureActionButton()
         configureMessageLabel()
         
     }
+    
     
     func configureContainerView() {
         view.addSubview(containerView)
@@ -53,9 +58,8 @@ class GFAlertVC: UIViewController {
         ])
     }
     
+    
     func configureTitleLabel() {
-        containerView.addSubview(titleLabel)
-        
         titleLabel.text = alertTitle ?? "Something went wrong"
         
         NSLayoutConstraint.activate([
@@ -66,9 +70,8 @@ class GFAlertVC: UIViewController {
         ])
     }
     
+    
     func configureActionButton() {
-        containerView.addSubview(actionButton)
-        
         actionButton.setTitle(buttonTitle ?? "Ok", for: .normal)
         actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
         
@@ -80,9 +83,8 @@ class GFAlertVC: UIViewController {
         ])
     }
     
+    
     func configureMessageLabel() {
-        containerView.addSubview(messageLabel)
-        
         messageLabel.text = message ?? "Unable to complete request"
         messageLabel.numberOfLines = 4
         
@@ -93,6 +95,7 @@ class GFAlertVC: UIViewController {
             messageLabel.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -12)
         ])
     }
+    
     
     @objc func dismissVC() {
         dismiss(animated: true)
