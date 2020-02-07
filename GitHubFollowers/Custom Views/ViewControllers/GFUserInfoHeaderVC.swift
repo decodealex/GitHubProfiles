@@ -2,8 +2,8 @@
 //  GFUserInfoHeaderVC.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 30.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 30.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -33,13 +33,14 @@ class GFUserInfoHeaderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
         layoutUI()
         configureUIElements()
     }
     
     
     func configureUIElements() {
-        downloadAvatarImage()
+        avatarImageView.downloadImage(fromURL: user.avatarUrl)
         usernameLabel.text = user.login
         nameLabel.text = user.name ?? ""
         locationLabel.text = user.location ?? "No location"
@@ -50,16 +51,7 @@ class GFUserInfoHeaderVC: UIViewController {
     }
     
     
-    private func downloadAvatarImage() {
-        NetworkManager.shared.downloadImage(from: user.avatarUrl) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async { self.avatarImageView.image = image }
-        }
-    }
-    
-    
     func layoutUI() {
-        view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
         let padding: CGFloat = 20
         let textImagePadding: CGFloat = 12
         locationImageView.translatesAutoresizingMaskIntoConstraints = false

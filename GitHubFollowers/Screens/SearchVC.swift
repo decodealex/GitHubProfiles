@@ -2,8 +2,8 @@
 //  SearchVC.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 10.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 10.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -13,7 +13,6 @@ class SearchVC: UIViewController {
     let logoImageView = UIImageView()
     let usernameTextField = GFTextField()
     let callToActionButton = GFButton(backgroudColor: .systemGreen, title: "Get Followers")
-    var logoImageViewTopConstraint: NSLayoutConstraint!
     
     var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
     
@@ -44,7 +43,6 @@ class SearchVC: UIViewController {
     
     
     @objc func pushFollowerListVC() {
-        
         guard isUsernameEntered else {
             presentGFAlertOnMainThread(title: "Empty user name", message: "Please enter user name 🙂", buttonTitle: "Ok")
             return
@@ -63,10 +61,8 @@ class SearchVC: UIViewController {
         
         let topConstraintConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 20 : 80
         
-        logoImageViewTopConstraint = logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topConstraintConstant)
-        logoImageViewTopConstraint.isActive = true
-        
         NSLayoutConstraint.activate([
+            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topConstraintConstant),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.heightAnchor.constraint(equalToConstant: 200),
             logoImageView.widthAnchor.constraint(equalToConstant: 200)

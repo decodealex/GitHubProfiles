@@ -2,8 +2,8 @@
 //  UserInfoVC.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 30.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 30.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -69,10 +69,10 @@ class UserInfoVC: GFDataLoadingVC {
     
     
     func layoutUI() {
-        
-        itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
         let padding: CGFloat = 20
         let itemHeight: CGFloat = 140
+        
+        itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
         
         itemViews.forEach {
             view.addSubview($0)

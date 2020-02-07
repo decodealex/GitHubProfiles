@@ -2,8 +2,8 @@
 //  UIViewController+Ext.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 12.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 12.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -26,6 +26,4 @@ extension UIViewController {
         safariVC.preferredControlTintColor = .systemGreen
         present(safariVC, animated: true)
     }
-    
-   
 }

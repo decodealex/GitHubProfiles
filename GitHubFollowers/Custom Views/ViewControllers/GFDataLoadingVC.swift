@@ -2,8 +2,8 @@
 //  GFDataLoadingVC.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 03.02.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 03.02.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -11,7 +11,7 @@ import UIKit
 class GFDataLoadingVC: UIViewController {
     
     var containerView: UIView!
-
+    
     
     func showLoadingView() {
         containerView = UIView(frame: view.bounds)

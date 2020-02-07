@@ -2,8 +2,8 @@
 //  GFItemInfoView.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 31.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 31.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,6 @@ enum ItemInfoType {
     case repos, gists, followers, following
 }
 
-
 class GFItemInfoView: UILabel {
     
     var views: [UIView] = []
@@ -20,10 +19,12 @@ class GFItemInfoView: UILabel {
     let titleLabel = GFTitleLabel(textAligment: .left, fontSize: 14)
     let countLabel = GFTitleLabel(textAligment: .center, fontSize: 14)
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -2,8 +2,8 @@
 //  GFAlertContainerView.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 03.02.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 03.02.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -20,6 +20,7 @@ class GFAlertContainerView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     private func configure() {
         backgroundColor = .systemBackground
         layer.cornerRadius = 16
@@ -27,5 +28,4 @@ class GFAlertContainerView: UIView {
         layer.borderColor = UIColor.white.cgColor
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }

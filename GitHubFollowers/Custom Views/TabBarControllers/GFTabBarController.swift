@@ -2,8 +2,8 @@
 //  GFTabBarController.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 01.02.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 01.02.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -26,6 +26,7 @@ class GFTabBarController: UITabBarController {
         return UINavigationController(rootViewController: searchVC)
     }
     
+    
     func createFavoritesNC() -> UINavigationController {
         let favoritesListVC = FavoritesListVC()
         favoritesListVC.title = "Favorites"
@@ -33,5 +34,4 @@ class GFTabBarController: UITabBarController {
         
         return UINavigationController(rootViewController: favoritesListVC)
     }
-    
 }

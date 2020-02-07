@@ -2,8 +2,8 @@
 //  GFTitleLabel.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 12.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 12.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -21,7 +21,7 @@ class GFTitleLabel: UILabel {
     }
     
     
-   convenience init(textAligment: NSTextAlignment, fontSize: CGFloat) {
+    convenience init(textAligment: NSTextAlignment, fontSize: CGFloat) {
         self.init(frame: .zero)
         self.textAlignment = textAligment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)

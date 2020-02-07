@@ -2,8 +2,8 @@
 //  FavoritesListVC.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 10.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 10.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -53,17 +53,23 @@ class FavoritesListVC: GFDataLoadingVC {
             guard let self = self else { return }
             switch result {
             case .success(let favorites):
-                if favorites.isEmpty {
-                    self.showEmptyStateView(with: "No favorites?\nAdd one on the follower screen.", in: self.view)
-                } else {
-                    self.favorites = favorites
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                        self.view.bringSubviewToFront(self.tableView)
-                    }
-                }
+                self.updateUI(with: favorites)
+                
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wromg", message: error.rawValue, buttonTitle: "Ok")
+            }
+        }
+    }
+    
+    
+    private func updateUI(with favorites: [Follower]) {
+        if favorites.isEmpty {
+            self.showEmptyStateView(with: "No favorites?\nAdd one on the follower screen.", in: self.view)
+        } else {
+            self.favorites = favorites
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.view.bringSubviewToFront(self.tableView)
             }
         }
     }

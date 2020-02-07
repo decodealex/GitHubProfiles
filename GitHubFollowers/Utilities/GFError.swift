@@ -2,8 +2,8 @@
 //  GFError.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 30.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 30.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import Foundation
@@ -16,4 +16,3 @@ enum GFError: String, Error {
     case unableToFavorite = "There was an error favoriting this user. Please try again."
     case alreadyInFavorites = "You've already favorited this user"
 }
- 

@@ -2,8 +2,8 @@
 //  PersistenceManager.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 01.02.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 01.02.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import Foundation
@@ -20,7 +20,6 @@ enum PersistenceManager {
         static let favorites = "favorites"
     }
     
-    
     static func updateWith(favorite: Follower, actionType: PersistenceActionType, completed: @escaping (GFError?) -> Void) {
         retrieveFavorites { result in
             switch result {
@@ -32,8 +31,9 @@ enum PersistenceManager {
                         completed(.alreadyInFavorites)
                         return
                     }
-                
+                    
                     retrievedFavorites.append(favorite)
+                    
                 case .remove:
                     retrievedFavorites.removeAll { $0.login == favorite.login}
                 }

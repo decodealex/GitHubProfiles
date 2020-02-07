@@ -2,13 +2,14 @@
 //  NetworkManager.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 17.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 17.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
 
 class NetworkManager {
+    
     static let shared = NetworkManager()
     private let baseURL = "https://api.github.com"
     let cache = NSCache<NSString, UIImage>()
@@ -94,7 +95,6 @@ class NetworkManager {
     
     
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {
-        
         let cacheKey = NSString(string: urlString)
         
         if let image = cache.object(forKey: cacheKey) {
@@ -116,7 +116,7 @@ class NetworkManager {
                 let image = UIImage(data: data) else {
                     completed(nil)
                     return
-                }
+            }
             
             self.cache.setObject(image, forKey: cacheKey)
             

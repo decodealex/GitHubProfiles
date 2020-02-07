@@ -2,8 +2,8 @@
 //  GFAlertVC.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 12.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 12.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -38,12 +38,12 @@ class GFAlertVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
-        configureContainerView()
         containerView.addSubviews(titleLabel, actionButton, messageLabel)
+        
+        configureContainerView()
         configureTitleLabel()
         configureActionButton()
         configureMessageLabel()
-        
     }
     
     

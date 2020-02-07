@@ -2,8 +2,8 @@
 //  GFSecondaryTitleLabel.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 30.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 30.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -34,5 +34,4 @@ class GFSecondaryTitleLabel: UILabel {
         lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
-    
 }

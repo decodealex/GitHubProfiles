@@ -2,19 +2,14 @@
 //  GFItemInfoVC.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 31.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 31.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
 
-//protocol ItemInfoVCDelegate: class {
-//    
-//    func didTapGitHubProfile(for user: User)
-//}
-
 class GFItemInfoVC: UIViewController {
-
+    
     let stackView = UIStackView()
     let itemInfoViewOne = GFItemInfoView()
     let itemInfoViewTwo = GFItemInfoView()
@@ -24,9 +19,9 @@ class GFItemInfoVC: UIViewController {
     
     
     init(user: User) {
-         super.init(nibName: nil, bundle: nil)
-         self.user = user
-     }
+        super.init(nibName: nil, bundle: nil)
+        self.user = user
+    }
     
     
     required init?(coder: NSCoder) {

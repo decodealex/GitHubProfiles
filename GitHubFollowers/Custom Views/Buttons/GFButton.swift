@@ -2,8 +2,8 @@
 //  GFButton.swift
 //  GitHubFollowers
 //
-//  Created by Oleksandr Kovalyshyn on 11.01.2020.
-//  Copyright © 2020 Oleksandr Kovalyshyn. All rights reserved.
+//  Created by Alex Kovalyshyn on 11.01.2020.
+//  Copyright © 2020 Alex Kovalyshyn. All rights reserved.
 //
 
 import UIKit
@@ -30,8 +30,8 @@ class GFButton: UIButton {
     
     private func configure() {
         layer.cornerRadius = 10
-        setTitleColor(.white, for: .normal)
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+        setTitleColor(.white, for: .normal)
         translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -39,6 +39,5 @@ class GFButton: UIButton {
     func set(backgroundColor: UIColor, title: String) {
         self.backgroundColor = backgroundColor
         setTitle(title, for: .normal)
-    }
-    
+    }    
 }
